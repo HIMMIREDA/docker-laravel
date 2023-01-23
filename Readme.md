@@ -11,20 +11,25 @@ A Docker Compose workflow that sets up a LEMP(Linux Nginx Mysql Php ) stack of c
     MYSQL_PASSWORD=secret
     MYSQL_ROOT_PASSWORD=secret
 ```
-## 2. create laravel app files :
+## 2. create an empty src folder (will contain laravel project files) :
+```bash
+    mkdir src
+```
+
+## 3. create laravel app files :
 ```bash
     make create_project
 ```
 
-## 3. start containers :
+## 4. start containers :
 ```bash
     make launch # you can now visit http://localhost:8000
 ```
 
-## 4. change .env values in src folder :
+## 5. change .env values in src folder :
     After containers get started modify .env in your src folder, host name should be mysql, not localhost. The username and database and password should have same values as the ones you set in mysql.env
 
-## 5. stop containers :
+## 6. stop containers :
 ```bash
     make stop
 ```
